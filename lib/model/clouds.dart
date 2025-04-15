@@ -1,5 +1,5 @@
 class Clouds {
-  final int? all;
+  final int? all; // الغيوم
 
   Clouds({this.all});
 
@@ -13,4 +13,3 @@ class Clouds {
     );
   }
 }
-

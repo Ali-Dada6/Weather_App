@@ -1,9 +1,10 @@
 class Sys {
-  final int? type;
-  final int? id;
-  final String? country;
-  final int? sunrise;
-  final int? sunset;
+  // بيانات النظام الجغرافي والزمني للطقس.
+  final int? type; // نوع النظام
+  final int? id; // معرف النظام
+  final String? country; // الدولة
+  final int? sunrise; // وقت شروق الشمس
+  final int? sunset; // وقت غروب الشمس
 
   Sys({this.type, this.id, this.country, this.sunrise, this.sunset});
 

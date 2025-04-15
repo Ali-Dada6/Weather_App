@@ -1,6 +1,7 @@
 class Wind {
-  final double? speed;
-  final int? deg;
+  // بيانات الرياح (السرعة والاتجاه).
+  final double? speed; // سرعة الرياح
+  final int? deg; // اتجاه الرياح
 
   Wind({this.speed, this.deg});
 

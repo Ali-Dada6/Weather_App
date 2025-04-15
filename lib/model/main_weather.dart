@@ -1,10 +1,10 @@
 class MainWeather {
-  final double? temp;
-  final double? feelsLike;
-  final double? tempMin;
-  final double? tempMax;
-  final int? pressure;
-  final int? humidity;
+  final double? temp; //درجة الحراره
+  final double? feelsLike; //الدرجه المحسوسه
+  final double? tempMin; //الحد الادنى لدرجة الحراره
+  final double? tempMax; //الحد الاعلى لدرجة الحراره
+  final int? pressure; //الشغط الجوي
+  final int? humidity; //نسبة الرطوبه
 
   MainWeather(
       {this.temp,

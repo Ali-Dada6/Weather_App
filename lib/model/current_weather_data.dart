@@ -6,6 +6,7 @@ import '/model/weather.dart';
 import '/model/wind.dart';
 
 class CurrentWeatherData {
+  // بيانات الطقس الحالية
   final Coord? coord;
   final List<Weather>? weather;
   final String? base;
@@ -28,11 +29,11 @@ class CurrentWeatherData {
       this.visibility,
       this.wind,
       this.clouds,
-      this.dt,
+      this.dt, // التوقيت بوحدة UNIX.
       this.sys,
-      this.timezone,
-      this.id,
-      this.name,
+      this.timezone, // المنطقة الزمنية بالنسبة لـ UTC
+      this.id, // معرف المدينه
+      this.name, // اسم المدينه
       this.cod});
 
   factory CurrentWeatherData.fromJson(dynamic json) {
@@ -42,9 +43,8 @@ class CurrentWeatherData {
 
     return CurrentWeatherData(
       coord: Coord.fromJson(json['coord']),
-      weather: (json['weather'] as List)
-              .map((w) => Weather.fromJson(w))
-              .toList() ,
+      weather:
+          (json['weather'] as List).map((w) => Weather.fromJson(w)).toList(),
       base: json['base'],
       main: MainWeather.fromJson(json['main']),
       visibility: json['visibility'],

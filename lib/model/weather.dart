@@ -1,8 +1,9 @@
 class Weather {
-  final int? id;
-  final String? main;
-  final String? description;
-  final String? icon;
+  // بيانات الطقس (المعرف، نوع الطقس او حالته، الوصف، الأيقونة).
+  final int? id; // المعرف
+  final String? main; //  نوع الطقس او حالته
+  final String? description; // الوصف
+  final String? icon; // الأيقونة
 
   Weather({this.id, this.main, this.description, this.icon});
 

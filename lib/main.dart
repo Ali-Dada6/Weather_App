@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:weather_app/pages/home/home_screen.dart';
-import 'package:weather_app/utils/Binding/HomeBinding.dart';
+import 'package:weather_project/pages/home/home_screen.dart';
+import 'package:weather_project/utils/Binding/HomeBinding.dart';
 
 void main() {
   runApp(WeatherApp());
@@ -16,7 +16,7 @@ class WeatherApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => HomeScreen(), // سيتم انشائها لاحقا
+          page: () => HomeScreen(),
           binding: HomeBinding(),
         ),
       ],

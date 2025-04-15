@@ -1,6 +1,7 @@
 class Coord {
-  final double? lon;
-  final double? lat;
+  // الاحداثيات
+  final double? lon; // خط الطول
+  final double? lat; // خط العرض
 
   Coord({this.lon, this.lat});
 

@@ -4,8 +4,10 @@ import '/model/five_days_data.dart';
 import '/service/weather_service.dart';
 
 class HomeController extends GetxController {
-  String? city;
-  String? searchText;
+  //  المسؤول عن جلب بيانات الطقس وتحديث الواجهة.
+
+  String? city; //  اسم المدينة
+  String? searchText; // يستخدم للبحث عن مدينة معينة
 
   CurrentWeatherData currentWeatherData = CurrentWeatherData();
   List<CurrentWeatherData> dataList = [];

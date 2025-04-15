@@ -8,7 +8,6 @@ class WeatherService {
   String baseUrl = 'https://api.openweathermap.org/data/2.5';
   String apiKey = 'appid=b02af426a3fad0d92d3e0b32f9324cf0';
 
-
   WeatherService({required this.city});
 
   void getCurrentWeatherData({
