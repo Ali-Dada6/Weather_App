@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:intl/intl.dart';
-import 'package:lottie/lottie.dart';
-import 'package:weather_project/constants/images.dart';
 import '../../controller/HomeController.dart';
+import '../../widget/myList.dart';
+import '../../widget/my_chart.dart';
 
 class HomeScreen extends GetView<HomeController> {
   @override
@@ -14,6 +14,7 @@ class HomeScreen extends GetView<HomeController> {
           child: Column(
             children: <Widget>[
               _buildHeader(context, controller),
+              _buildContent(context, controller),
             ],
           ),
         );
@@ -40,7 +41,7 @@ class HomeScreen extends GetView<HomeController> {
             backgroundColor: Colors.transparent,
             elevation: 0,
             leading: IconButton(
-              icon: Icon(Icons.menu, color: Colors.white),
+              icon: Icon(Icons.person, color: Colors.white),
               onPressed: () {},
             ),
           ),
@@ -124,7 +125,6 @@ class HomeScreen extends GetView<HomeController> {
         ),
         Column(
           children: <Widget>[
-            // Lottie.asset(Images.cloudyAnim, width: 120, height: 120),
             if (controller.currentWeatherData.weather![0].main == 'Rain')
               Image(
                   image: AssetImage('assets/images/rain.png'),
@@ -147,11 +147,27 @@ class HomeScreen extends GetView<HomeController> {
                   image: AssetImage('assets/images/suny.png'),
                   width: 80,
                   height: 80),
-
             Text('Wind ${controller.currentWeatherData.wind!.speed} m/s'),
           ],
         ),
       ],
+    );
+  }
+
+  Widget _buildContent(BuildContext context, HomeController controller) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('OTHER CITY', style: Theme.of(context).textTheme.bodySmall),
+          MyList(),
+          SizedBox(height: 10),
+          Text('FORECAST NEXT 5 DAYS',
+              style: Theme.of(context).textTheme.bodySmall),
+          MyChart(),
+        ],
+      ),
     );
   }
 }

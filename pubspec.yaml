@@ -32,7 +32,6 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/anims/
 
   fonts:
     - family: flutterfonts
